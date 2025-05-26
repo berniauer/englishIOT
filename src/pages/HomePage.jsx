@@ -1,6 +1,7 @@
+// HomePage.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/button'; // Assuming this path is correct
 import { Link } from 'react-router-dom';
 import { Lightbulb, Zap, Settings, MessageCircle, Cpu, Radio, Rss, Brain, Code } from 'lucide-react';
 
@@ -28,13 +29,13 @@ const HighlightCard = ({ icon: Icon, title, text, link, delay }) => (
     <h3 className="text-xl font-semibold mb-2 text-primary">{title}</h3>
     <p className="text-muted-foreground text-sm mb-4 flex-grow">{text}</p>
     <Button asChild variant="link" className="mt-auto text-cta hover:text-cta/80">
-      <Link to={link}>Mehr erfahren</Link>
+      <Link to={link}>Learn more</Link>
     </Button>
   </motion.div>
 );
 
 const TechItem = ({ icon: Icon, name, delay }) => (
-  <motion.div 
+  <motion.div
     className="flex flex-col items-center p-3 bg-secondary/20 rounded-lg"
     variants={sectionVariants}
     initial="hidden"
@@ -55,45 +56,45 @@ const HomePage = () => {
       transition={{ duration: 0.5 }}
       className="space-y-16 md:space-y-24 py-8 md:py-12"
     >
-      {/* SEO Keywords Meta (conceptual - not directly rendered but influences content) */}
-      <meta name="keywords" content="Smart Home Abstract, IoT Diplomarbeit, Raspberry Pi Projekt, ZigBee Koordinator" />
+      {/* SEO Keywords Meta */}
+      <meta name="keywords" content="Smart Home Project, IoT Thesis, Raspberry Pi Project, ZigBee Coordinator, DIY Home Automation, Adam Dolgos" />
 
-      {/* 1. Hero-Bereich */}
-      <motion.section 
+      {/* 1. Hero Section */}
+      <motion.section
         className="text-center py-12 md:py-16 bg-gradient-to-br from-background to-secondary/10 rounded-xl shadow-sm"
         variants={sectionVariants}
         initial="hidden"
         animate="visible"
       >
         <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary max-w-3xl mx-auto leading-tight">
-          Smart Home selbst gebaut: Einblicke in ein IoT-Projekt mit Raspberry Pi und ZigBee
+          DIY Smart Home: Insights into an IoT Project with Raspberry Pi and ZigBee
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-          Willkommen! Diese Website dokumentiert die Konzeption und Implementierung eines flexiblen Smart-Home-Systems, basierend auf der Diplomarbeit von Adam Dolgos. Entdecken Sie die Welt des IoT, ZigBee und Open-Source-Plattformen.
+          Welcome! This website documents the conception and implementation of a flexible Smart Home system, based on Adam Dolgos' thesis. Discover the world of IoT, ZigBee, and open-source platforms.
         </p>
         <Button asChild size="lg" className="bg-cta hover:bg-cta/90 text-cta-foreground shadow-md hover:shadow-lg transition-shadow">
-          <Link to="/about-project">Projekt entdecken</Link>
+          <Link to="/about-project">Discover the Project</Link>
         </Button>
       </motion.section>
 
-      {/* 2. Sektion: Projekt-Überblick */}
-      <motion.section 
+      {/* 2. Project Overview Section */}
+      <motion.section
         className="py-10 md:py-12"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
       >
-        <h2 className="text-3xl md:text-4xl font-semibold text-center mb-8 text-primary">Das Projekt im Kern</h2>
+        <h2 className="text-3xl md:text-4xl font-semibold text-center mb-8 text-primary">The Project at its Core</h2>
         <div className="max-w-3xl mx-auto bg-card p-8 rounded-lg shadow-lg">
           <p className="text-muted-foreground text-left md:text-lg leading-relaxed">
-            Diese Arbeit realisiert ein Smart Home Grundkonzept auf einem Raspberry Pi, wobei ZigBee als Schlüsseltechnologie identifiziert wurde. Ein herstellerunabhängiger ZigBee-Koordinator (basierend auf CC2531 & Zigbee2MQTT) ermöglicht die flexible Anbindung diverser Geräte. Die Verwaltung und Steuerung erfolgt über die Open-Source-Plattformen Domoticz und Home Assistant. Die Arbeit demonstriert detailliert den Installationsprozess und den praktischen Betrieb des Systems.
+            This work realizes a foundational Smart Home concept on a Raspberry Pi, with ZigBee identified as a key technology. A manufacturer-independent ZigBee coordinator (based on CC2531 & Zigbee2MQTT) enables the flexible integration of various devices. Management and control are handled via the open-source platforms Domoticz and Home Assistant. The thesis demonstrates in detail the installation process and practical operation of the system.
           </p>
         </div>
       </motion.section>
 
-      {/* 3. Sektion: Themen-Highlights */}
-      <motion.section 
+      {/* 3. Topic Highlights Section */}
+      <motion.section
         className="py-10 md:py-12 bg-secondary/10 rounded-xl shadow-sm"
         variants={sectionVariants}
         initial="hidden"
@@ -101,17 +102,17 @@ const HomePage = () => {
         custom={0.2}
         viewport={{ once: true, amount: 0.2 }}
       >
-        <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12 text-primary">Was Sie erwartet</h2>
+        <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12 text-primary">What You Will Explore</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 px-4 md:px-0">
-          <HighlightCard icon={Brain} title="IoT Grundlagen" text="Verstehen Sie die Konzepte hinter dem Internet der Dinge und Smart Homes." link="/iot-basics" delay={0.3}/>
-          <HighlightCard icon={Radio} title="ZigBee Technologie" text="Erfahren Sie Details zum energieeffizienten ZigBee-Standard." link="/zigbee-detail" delay={0.4}/>
-          <HighlightCard icon={Settings} title="Praktische Umsetzung" text="Einblicke in Hardware, Software und Konfiguration." link="/system-implementation" delay={0.5}/>
-          <HighlightCard icon={MessageCircle} title="Domoticz vs. Home Assistant" text="Ein Vergleich der eingesetzten Smart Home Plattformen." link="/discussion-results" delay={0.6}/>
+          <HighlightCard icon={Brain} title="IoT Basics" text="Understand the concepts behind the Internet of Things and Smart Homes." link="/iot-basics" delay={0.3}/>
+          <HighlightCard icon={Radio} title="ZigBee Technology" text="Learn details about the energy-efficient ZigBee standard." link="/zigbee-detail" delay={0.4}/>
+          <HighlightCard icon={Settings} title="Practical Implementation" text="Insights into hardware, software, and configuration." link="/system-implementation" delay={0.5}/>
+          <HighlightCard icon={MessageCircle} title="Platform Comparison" text="A comparison of the Smart Home platforms Domoticz and Home Assistant." link="/discussion-results" delay={0.6}/>
         </div>
       </motion.section>
 
-      {/* 4. Sektion: Eingesetzte Kerntechnologien */}
-      <motion.section 
+      {/* 4. Core Technologies Section */}
+      <motion.section
         className="py-10 md:py-12"
         variants={sectionVariants}
         initial="hidden"
@@ -119,7 +120,7 @@ const HomePage = () => {
         custom={0.2}
         viewport={{ once: true, amount: 0.2 }}
       >
-        <h2 className="text-3xl md:text-4xl font-semibold text-center mb-10 text-primary">Kerntechnologien</h2>
+        <h2 className="text-3xl md:text-4xl font-semibold text-center mb-10 text-primary">Core Technologies</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 max-w-4xl mx-auto px-4 md:px-0">
           <TechItem icon={Cpu} name="Raspberry Pi" delay={0.3} />
           <TechItem icon={Radio} name="ZigBee" delay={0.35} />
@@ -131,26 +132,26 @@ const HomePage = () => {
         </div>
       </motion.section>
 
-      {/* 5. Sektion: Call-to-Action */}
-      <motion.section 
-        className="text-center py-12 md:py-16 bg-gradient-to-tr from-primary to-blue-700 text-primary-foreground rounded-xl shadow-lg"
+      {/* 5. Call-to-Action Section */}
+      <motion.section
+        className="text-center py-12 md:py-16 bg-gradient-to-tr from-primary to-blue-700 text-primary-foreground rounded-xl shadow-lg" // Assuming primary-foreground is defined
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
         custom={0.2}
         viewport={{ once: true, amount: 0.3 }}
       >
-        <h2 className="text-3xl md:text-4xl font-semibold mb-6">Interessiert an Details?</h2>
+        <h2 className="text-3xl md:text-4xl font-semibold mb-6">Interested in Details?</h2>
         <p className="text-lg md:text-xl mb-10 max-w-xl mx-auto opacity-90">
-          Tauchen Sie tiefer in die einzelnen Kapitel ein oder nehmen Sie Kontakt auf!
+          Dive deeper into the individual chapters or get in touch!
         </p>
         <div className="space-y-4 sm:space-y-0 sm:space-x-4">
           <Button asChild size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary shadow-md hover:shadow-lg transition-all duration-300">
-            <Link to="/system-implementation">Alle Projektphasen</Link>
+            <Link to="/system-implementation">All Project Phases</Link>
           </Button>
-          {/* Optional: Kontakt Button, wenn Kontaktseite existiert */}
+          {/* Optional: Contact Button, if contact page exists */}
           {/* <Button size="lg" className="bg-cta-alt hover:bg-cta-alt/90 text-cta-alt-foreground shadow-md hover:shadow-lg transition-shadow">
-            Kontakt
+            Contact
           </Button> */}
         </div>
       </motion.section>

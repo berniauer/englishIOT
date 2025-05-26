@@ -1,17 +1,17 @@
-
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/button'; // Assuming this path is correct
 
 const navLinks = [
-  { to: '/', text: 'Startseite' },
-  { to: '/about-project', text: 'Über das Projekt & KI' },
-  { to: '/iot-basics', text: 'IoT & Smart Home Grundlagen' },
-  { to: '/zigbee-detail', text: 'ZigBee im Detail' },
-  { to: '/system-implementation', text: 'System-Implementierung' },
-  { to: '/discussion-results', text: 'Diskussion & Ergebnisse' },
+  { to: '/', text: 'Home' },
+  { to: '/about-project', text: 'About Project & AI' },
+  { to: '/iot-basics', text: 'IoT & Smart Home Basics' },
+  { to: '/zigbee-detail', text: 'ZigBee in Detail' },
+  { to: '/system-implementation', text: 'System Implementation' },
+  { to: '/discussion-results', text: 'Discussion & Results' },
+  // { to: '/contact', text: 'Contact' }, // Optional: Add if you have a contact page
 ];
 
 const Header = () => {
@@ -38,7 +38,7 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <NavLink to="/" className="text-xl font-heading font-bold text-primary">
-          IoT Smart Home Projekt
+          IoT Smart Home Project
         </NavLink>
         <nav className="hidden md:flex space-x-6">
           {navLinks.map((link) => (
@@ -70,7 +70,7 @@ const Header = () => {
             <NavLink
               key={link.to}
               to={link.to}
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => setIsMobileMenuOpen(false)} // Close menu on link click
               className={({ isActive }) =>
                 `w-full text-center py-2 ${isActive ? activeLinkStyle : inactiveLinkStyle}`
               }
@@ -85,4 +85,3 @@ const Header = () => {
 };
 
 export default Header;
-  

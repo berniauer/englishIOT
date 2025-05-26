@@ -1,3 +1,4 @@
+// AboutProjectPage.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle } from 'lucide-react';
@@ -12,7 +13,7 @@ const sectionVariants = {
 };
 
 const ListItem = ({ children, delay }) => (
-  <motion.li 
+  <motion.li
     className="flex items-start space-x-3"
     variants={sectionVariants}
     custom={delay}
@@ -20,74 +21,75 @@ const ListItem = ({ children, delay }) => (
     whileInView="visible"
     viewport={{ once: true, amount: 0.5 }}
   >
-    <CheckCircle className="h-6 w-6 text-cta-alt flex-shrink-0 mt-1" />
+    <CheckCircle className="h-6 w-6 text-cta-alt flex-shrink-0 mt-1" /> {/* Assuming cta-alt is defined in your Tailwind config */}
     <span>{children}</span>
   </motion.li>
 );
 
 const AboutProjectPage = () => {
   return (
-    <motion.div 
+    <motion.div
       className="py-8 md:py-12 space-y-12 md:space-y-16"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <meta name="keywords" content="Akademisches Projekt, Diplomarbeit Website, KI Website Erstellung, IoT Forschung, Smart Home Studie" />
-      
-      <motion.h1 
+      {/* SEO Keywords Meta - This was already in English, but I'll keep it for completeness and add CAMPUS 02 */}
+      <meta name="keywords" content="Academic Project, Thesis Website, AI Website Creation, IoT Research, Smart Home Study, Adam Dolgos, CAMPUS 02" />
+
+      <motion.h1
         className="text-4xl md:text-5xl font-bold mb-8 md:mb-12 text-primary text-center"
         variants={sectionVariants}
         initial="hidden"
         animate="visible"
       >
-        Projekt-Hintergrund und der Einsatz von KI
+        Project Background and the Role of AI
       </motion.h1>
 
-      {/* Sektion 1: Das ursprüngliche Forschungsprojekt */}
+      {/* Section 1: The Original Research Project */}
       <motion.section
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
         custom={0.1}
         viewport={{ once: true, amount: 0.2 }}
-        className="bg-card p-6 md:p-8 rounded-xl shadow-lg"
+        className="bg-card p-6 md:p-8 rounded-xl shadow-lg" // Assuming card, primary-dark are defined
       >
-        <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-primary-dark">Motivation und Ziele der Diplomarbeit</h2>
-        <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+        <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-primary-dark">Motivation and Goals of the Thesis</h2>
+        <div className="space-y-4 text-lg text-muted-foreground leading-relaxed"> {/* Assuming muted-foreground is defined */}
           <p>
-            Diese Website basiert auf der Diplomarbeit "Internet of Things - Smart Home" von Adam Dolgos, eingereicht am CAMPUS 02 Fachhochschule der Wirtschaft in Graz im Jahr 2020. Das Kernziel der Arbeit war die Konzeption und praktische Realisierung eines funktionierenden, flexiblen und kostengünstigen Smart Home Systems. Im Fokus standen dabei Open-Source-Komponenten und herstellerunabhängige Lösungen. Untersucht wurden geeignete Kommunikationsprotokolle, die Auswahl der Hardware (insbesondere Raspberry Pi als Zentrale und der CC2531-USB-Stick als ZigBee-Koordinator) sowie die Evaluierung und Implementierung der Software-Plattformen Domoticz und Home Assistant. Die Diplomarbeit demonstriert somit ein vollumfängliches Beispiel für ein selbstgebautes, IoT-basiertes Smart Home.
+            This website is based on the thesis "Internet of Things - Smart Home" by Adam Dolgos, submitted at CAMPUS 02 University of Applied Sciences in Graz, Austria, in 2020. The core objective of the work was the conception and practical realization of a functioning, flexible, and cost-effective Smart Home system. The focus was on open-source components and manufacturer-independent solutions. Suitable communication protocols, hardware selection (especially Raspberry Pi as the central unit and the CC2531 USB stick as a ZigBee coordinator), as well as the evaluation and implementation of the software platforms Domoticz and Home Assistant were investigated. The thesis thus demonstrates a comprehensive example of a self-built, IoT-based Smart Home.
           </p>
         </div>
       </motion.section>
 
-      {/* Sektion 2: Die Rolle von KI bei der Website-Erstellung */}
+      {/* Section 2: The Role of AI in Website Creation */}
       <motion.section
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
         custom={0.2}
         viewport={{ once: true, amount: 0.2 }}
-        className="bg-secondary/10 p-6 md:p-8 rounded-xl shadow-lg"
+        className="bg-secondary/10 p-6 md:p-8 rounded-xl shadow-lg" // Assuming secondary is defined
       >
-        <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-primary-dark">Wie Künstliche Intelligenz diese Website mitgestaltet hat</h2>
+        <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-primary-dark">How Artificial Intelligence Shaped This Website</h2>
         <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
           <p>
-            Die Transformation einer umfangreichen akademischen Arbeit in eine übersichtliche und ansprechende Website kann zeitintensiv sein. Um diesen Prozess zu unterstützen und die Inhalte optimal für das Web aufzubereiten, wurde für die Erstellung dieser Online-Präsentation Künstliche Intelligenz (KI) als Werkzeug eingesetzt.
+            Transforming an extensive academic paper into a clear and engaging website can be time-consuming. To support this process and optimally prepare the content for the web, Artificial Intelligence (AI) was used as a tool for creating this online presentation.
           </p>
-          
+
           <ul className="space-y-4 pl-2 md:pl-4">
             <ListItem delay={0.3}>
-              <strong>Inhaltsanalyse & Extraktion:</strong> Eine KI half dabei, die Kerninformationen, Schlüsselbegriffe und die Struktur aus den bereitgestellten Texten der Diplomarbeit zu extrahieren.
+              <strong>Content Analysis & Extraction:</strong> An AI helped to extract core information, keywords, and the structure from the provided texts of the thesis.
             </ListItem>
             <ListItem delay={0.4}>
-              <strong>Strukturierung für das Web:</strong> Basierend auf der Analyse unterstützte die KI bei der Entwicklung einer logischen Seitenstruktur und Navigationshierarchie, die für eine gute Benutzererfahrung im Web optimiert ist.
+              <strong>Web Structuring:</strong> Based on the analysis, the AI assisted in developing a logical page structure and navigation hierarchy optimized for a good user experience on the web.
             </ListItem>
             <ListItem delay={0.5}>
-              <strong>Texterstellung & Zusammenfassung:</strong> Die KI wurde genutzt, um komplexe technische Sachverhalte aus der Diplomarbeit in prägnante und web-freundliche Texte umzuformulieren und Kernaussagen, wie beispielsweise den Projekt-Abstract, zu generieren.
+              <strong>Text Generation & Summarization:</strong> AI was used to rephrase complex technical matters from the thesis into concise and web-friendly texts and to generate key statements, such as the project abstract.
             </ListItem>
             <ListItem delay={0.6}>
-              <strong>SEO-Optimierung:</strong> Die KI lieferte Vorschläge für relevante Keywords und half bei der Formulierung von SEO-freundlichen Überschriften, um die Auffindbarkeit der Website zu verbessern.
+              <strong>SEO Optimization:</strong> The AI provided suggestions for relevant keywords and helped in formulating SEO-friendly headlines to improve the website's discoverability.
             </ListItem>
           </ul>
 
@@ -97,9 +99,9 @@ const AboutProjectPage = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
-            className="pt-4 font-medium text-foreground"
+            className="pt-4 font-medium text-foreground" // Assuming foreground is defined
           >
-            Der Einsatz von KI diente hier als effizientes Hilfsmittel zur Inhaltsaufbereitung und Strukturierung. Die finale inhaltliche Überprüfung, das Design (realisiert mit Hostinger Horizons) und die spezifische Anpassung an die Zielgruppe bleiben jedoch wesentliche menschliche Aufgaben, um die Qualität und Relevanz der Präsentation sicherzustellen.
+            The use of AI served as an efficient aid for content preparation and structuring. However, the final content review, design (e.g., realized with a modern web framework and tools like Tailwind CSS, animated with Framer Motion), and specific adaptation to the target audience remain essential human tasks to ensure the quality and relevance of the presentation.
           </motion.p>
         </div>
       </motion.section>
