@@ -113,7 +113,7 @@ return (
         This diagram illustrates how ZigBee devices communicate with the CC2531 coordinator and how data is routed through MQTT to the smart home platform.
       </p>
       <img
-        src="/public/assets/img/data-flow-overview.svg"
+        src="/assets/img/data-flow-overview.svg"
         alt="Data flow architecture between ZigBee devices, CC2531, MQTT broker, and automation platform"
         className="w-full max-w-5xl mx-auto rounded-md border border-muted"
       />
