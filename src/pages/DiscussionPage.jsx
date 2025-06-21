@@ -63,12 +63,34 @@ const FutureProspectItem = ({ icon: Icon, title, description, delay }) => ( // t
 
 const DiscussionResultsPage = () => {
   return (
-    <motion.div
-      className="py-8 md:py-12"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
+    <React.Fragment>
+      {/* Visual Comparison Chart */}
+      <motion.div
+        className="mt-12 bg-secondary/10 p-6 md:p-8 rounded-xl shadow-md"
+        variants={sectionVariants}
+        custom={0.7}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <h3 className="text-xl md:text-2xl font-semibold text-center mb-4 text-primary">
+          Visual Summary: Domoticz vs. Home Assistant
+        </h3>
+        <p className="text-sm text-muted-foreground text-center max-w-2xl mx-auto mb-6">
+          The following chart provides a summarized, side-by-side comparison of key platform attributes based on the Likert-scale evaluation from the thesis.
+        </p>
+        <img
+          src="/assets/img/domoticz-vs-home-assistant.svg"
+          alt="Comparison chart of Domoticz and Home Assistant smart home platforms"
+          className="w-full max-w-5xl mx-auto rounded-md border border-muted"
+        />
+      </motion.div>
+      <motion.div
+        className="py-8 md:py-12"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
       {/* SEO Keywords Meta */}
       <meta name="keywords" content="Smart Home Project Results, IoT Project Discussion, Domoticz vs Home Assistant, ZigBee Implementation Review, Home Automation Comparison, Future Smart Home Trends, Adam Dolgos Thesis" />
 
@@ -224,6 +246,7 @@ const DiscussionResultsPage = () => {
         </div>
       </motion.section>
     </motion.div>
+    </React.Fragment>
   );
 };
 

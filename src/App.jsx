@@ -9,6 +9,7 @@ import ZigbeePage from '@/pages/ZigbeePage';
 import ImplementationPage from '@/pages/ImplementationPage';
 import DiscussionPage from '@/pages/DiscussionPage';
 import { Toaster } from '@/components/ui/toaster';
+import AbstractPage from '@/pages/AbstractPage';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/zigbee-detail" element={<ZigbeePage />} />
           <Route path="/system-implementation" element={<ImplementationPage />} />
           <Route path="/discussion-results" element={<DiscussionPage />} />
+          <Route path="/abstract" element={<AbstractPage />} />
         </Routes>
       </Layout>
       <Toaster />

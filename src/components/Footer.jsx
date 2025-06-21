@@ -24,7 +24,7 @@ const Footer = () => {
         </div>
         <div className="flex justify-center space-x-6">
           <a 
-            href={instagramUrl} 
+            href="https://www.instagram.com/iot_smarthomeproject?igsh=dDRtNXZ3eW9zczFv&utm_source=qr" 
             aria-label="Instagram" 
             target="_blank" 
             rel="noopener noreferrer" 

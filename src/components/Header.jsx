@@ -11,6 +11,7 @@ const navLinks = [
   { to: '/zigbee-detail', text: 'ZigBee in Detail' },
   { to: '/system-implementation', text: 'System Implementation' },
   { to: '/discussion-results', text: 'Discussion & Results' },
+  { to: '/abstract', text: 'Abstract' },
   // { to: '/contact', text: 'Contact' }, // Optional: Add if you have a contact page
 ];
 

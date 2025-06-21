@@ -57,8 +57,10 @@ const HomePage = () => {
       className="space-y-16 md:space-y-24 py-8 md:py-12"
     >
       {/* SEO Keywords Meta */}
-      <meta name="keywords" content="Smart Home Project, IoT Thesis, Raspberry Pi Project, ZigBee Coordinator, DIY Home Automation, Adam Dolgos" />
-
+      <meta 
+        name="keywords" 
+        content="DIY Smart Home, ZigBee Smart Home, Raspberry Pi Home Automation, Open Source Smart Home, Zigbee2MQTT, Domoticz, Home Assistant, IoT Project, Smart Home Thesis, Smart Home with Raspberry Pi"
+      />
       {/* 1. Hero Section */}
       <motion.section
         className="text-center py-12 md:py-16 bg-gradient-to-br from-background to-secondary/10 rounded-xl shadow-sm"
@@ -70,7 +72,7 @@ const HomePage = () => {
           DIY Smart Home: Insights into an IoT Project with Raspberry Pi and ZigBee
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-          Welcome! This website documents the conception and implementation of a flexible Smart Home system, based on Adam Dolgos' thesis. Discover the world of IoT, ZigBee, and open-source platforms.
+          Explore <Link to="/zigbee-detail">ZigBee technology</Link>, <Link to="/system-implementation">Raspberry Pi configuration</Link>, and automation platforms like <Link to="/discussion-results">Domoticz and Home Assistant</Link>.
         </p>
         <Button asChild size="lg" className="bg-cta hover:bg-cta/90 text-cta-foreground shadow-md hover:shadow-lg transition-shadow">
           <Link to="/about-project">Discover the Project</Link>
@@ -121,15 +123,30 @@ const HomePage = () => {
         viewport={{ once: true, amount: 0.2 }}
       >
         <h2 className="text-3xl md:text-4xl font-semibold text-center mb-10 text-primary">Core Technologies</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 max-w-4xl mx-auto px-4 md:px-0">
-          <TechItem icon={Cpu} name="Raspberry Pi" delay={0.3} />
-          <TechItem icon={Radio} name="ZigBee" delay={0.35} />
-          <TechItem icon={Rss} name="MQTT" delay={0.4} />
-          <TechItem icon={Lightbulb} name="Domoticz" delay={0.45} />
-          <TechItem icon={Zap} name="Home Assistant" delay={0.5} />
-          <TechItem icon={Settings} name="CC2531" delay={0.55} />
-          <TechItem icon={Code} name="Linux" delay={0.6} />
-        </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 max-w-4xl mx-auto px-4 md:px-0">
+            <a href="https://www.raspberrypi.com/" target="_blank" rel="noopener noreferrer">
+              <TechItem icon={Cpu} name="Raspberry Pi" delay={0.3} />
+            </a>
+            <a href="https://www.zigbee2mqtt.io/" target="_blank" rel="noopener noreferrer">
+              <TechItem icon={Radio} name="ZigBee" delay={0.35} />
+            </a>
+            <a href="https://mosquitto.org/" target="_blank" rel="noopener noreferrer">
+              <TechItem icon={Rss} name="MQTT" delay={0.4} />
+            </a>
+            <a href="https://www.domoticz.com/" target="_blank" rel="noopener noreferrer">
+              <TechItem icon={Lightbulb} name="Domoticz" delay={0.45} />
+            </a>
+            <a href="https://www.home-assistant.io/" target="_blank" rel="noopener noreferrer">
+              <TechItem icon={Zap} name="Home Assistant" delay={0.5} />
+            </a>
+            <a href="https://www.ti.com/tool/CC2531EMK" target="_blank" rel="noopener noreferrer">
+              <TechItem icon={Settings} name="CC2531" delay={0.55} />
+            </a>
+            <a href="https://www.kernel.org/" target="_blank" rel="noopener noreferrer">
+              <TechItem icon={Code} name="Linux" delay={0.6} />
+            </a>
+          </div>
+
       </motion.section>
 
       {/* 5. Call-to-Action Section */}

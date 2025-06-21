@@ -80,6 +80,23 @@ const IoTBasicsPage = () => {
           <ListItem delay={0.3}><strong>Data Processing:</strong> Collected data is processed, analyzed, and used for decision-making.</ListItem>
           <ListItem delay={0.35}><strong>Interaction:</strong> Seamless connection between the physical and digital worlds.</ListItem>
         </ul>
+
+        <p className="text-sm text-muted-foreground mt-6">
+          Useful external resources:
+        </p>
+        <ul className="list-disc list-inside text-sm text-muted-foreground/90 mt-2 pl-4 space-y-1">
+          <li>
+            <a href="https://www.ibm.com/topics/internet-of-things" target="_blank" rel="noopener noreferrer" className="text-cta hover:underline">
+              IBM – What is the Internet of Things?
+            </a>
+          </li>
+          <li>
+            <a href="https://en.wikipedia.org/wiki/Internet_of_things" target="_blank" rel="noopener noreferrer" className="text-cta hover:underline">
+              Wikipedia: Internet of Things
+            </a>
+          </li>
+        </ul>
+
       </SectionCard>
 
       <SectionCard title="From Machine-to-Machine (M2M) to the Internet of Things" delay={0.2} seoKeywords="M2M vs IoT, Evolution of Device Communication, Machine to Machine IoT">

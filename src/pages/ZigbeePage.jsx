@@ -50,7 +50,10 @@ const ZigbeePage = () => {
       transition={{ duration: 0.5 }}
     >
       {/* SEO Keywords Meta */}
-      <meta name="keywords" content="ZigBee Technology, ZigBee Protocol, IEEE 802.15.4, Smart Home Wireless, Low Power Network, ZigBee Mesh" />
+      <meta 
+        name="keywords" 
+        content="ZigBee Technology, ZigBee Protocol, IEEE 802.15.4, Smart Home Wireless, ZigBee Mesh Network, Low Power IoT, Zigbee2MQTT, CC2531 Coordinator, Open Source Home Automation, ZigBee in Home Assistant, ZigBee Domoticz Integration" 
+      />
 
       <motion.h1
         className="text-4xl md:text-5xl font-bold mb-10 md:mb-16 text-primary text-center"
@@ -77,6 +80,38 @@ const ZigbeePage = () => {
           <p className="text-foreground font-medium">
             Stay tuned! Detailed content for this page is currently under development and will be added soon.
           </p>
+
+          <p className="text-sm text-muted-foreground mt-6">
+            Learn more from these external resources:
+          </p>
+          <ul className="list-disc list-inside text-sm text-muted-foreground/90 mt-2 space-y-1 pl-4">
+            <li>
+              <a href="https://www.zigbee2mqtt.io/" target="_blank" rel="noopener noreferrer" className="text-cta hover:underline">
+                Zigbee2MQTT – Device compatibility & configuration
+              </a>
+            </li>
+            <li>
+              <a href="https://csa-iot.org/" target="_blank" rel="noopener noreferrer" className="text-cta hover:underline">
+                Connectivity Standards Alliance (CSA) – ZigBee Standardization
+              </a>
+            </li>
+            <li>
+              <a href="https://standards.ieee.org/ieee/802.15.4/6210/" target="_blank" rel="noopener noreferrer" className="text-cta hover:underline">
+                IEEE 802.15.4 – Official IEEE Specification
+              </a>
+            </li>
+            <li>
+              <a href="https://www.home-assistant.io/integrations/zha/" target="_blank" rel="noopener noreferrer" className="text-cta hover:underline">
+                Home Assistant ZigBee Integration (ZHA)
+              </a>
+            </li>
+            <li>
+              <a href="https://www.domoticz.com/wiki/Zigbee2MQTT" target="_blank" rel="noopener noreferrer" className="text-cta hover:underline">
+                Domoticz Zigbee2MQTT Plugin Wiki
+              </a>
+            </li>
+          </ul>
+
         </div>
       </motion.section>
 

@@ -96,7 +96,29 @@ const PlaceholderCode = ({ caption, language = "yaml" }) => (
 
 
 const ImplementationPage = () => {
-  return (
+return (
+  <>
+    <motion.div
+      className="mt-12 bg-secondary/10 p-6 md:p-8 rounded-xl shadow-md"
+      variants={sectionVariants}
+      custom={0.7}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+    >
+      <h3 className="text-xl md:text-2xl font-semibold text-center mb-4 text-primary">
+        System Data Flow Overview
+      </h3>
+      <p className="text-sm text-muted-foreground text-center max-w-2xl mx-auto mb-6">
+        This diagram illustrates how ZigBee devices communicate with the CC2531 coordinator and how data is routed through MQTT to the smart home platform.
+      </p>
+      <img
+        src="/assets/img/data-flow-overview.svg"
+        alt="Data flow architecture between ZigBee devices, CC2531, MQTT broker, and automation platform"
+        className="w-full max-w-5xl mx-auto rounded-md border border-muted"
+      />
+    </motion.div>
+
     <motion.div
       className="py-8 md:py-12"
       initial={{ opacity: 0 }}
@@ -225,7 +247,8 @@ const ImplementationPage = () => {
       </ImplementationSection>
 
     </motion.div>
-  );
+  </>
+);
 };
 
 export default ImplementationPage;

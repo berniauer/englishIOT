@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle } from 'lucide-react';
+import { Bot, Sparkles } from 'lucide-react'; // oben im File importieren
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -35,7 +36,10 @@ const AboutProjectPage = () => {
       transition={{ duration: 0.5 }}
     >
       {/* SEO Keywords Meta - This was already in English, but I'll keep it for completeness and add CAMPUS 02 */}
-      <meta name="keywords" content="Academic Project, Thesis Website, AI Website Creation, IoT Research, Smart Home Study, Adam Dolgos, CAMPUS 02" />
+     <meta 
+        name="keywords" 
+        content="Smart Home Project, DIY Smart Home, ZigBee2MQTT, Raspberry Pi Home Automation, Domoticz, Home Assistant, ZigBee Coordinator, Open Source Smart Home, Academic Thesis, CAMPUS 02, AI-assisted Web Content, IoT Platform Comparison"
+      />
 
       <motion.h1
         className="text-4xl md:text-5xl font-bold mb-8 md:mb-12 text-primary text-center"
@@ -58,7 +62,7 @@ const AboutProjectPage = () => {
         <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-primary-dark">Motivation and Goals of the Thesis</h2>
         <div className="space-y-4 text-lg text-muted-foreground leading-relaxed"> {/* Assuming muted-foreground is defined */}
           <p>
-            This website is based on the thesis "Internet of Things - Smart Home" by Adam Dolgos, submitted at CAMPUS 02 University of Applied Sciences in Graz, Austria, in 2020. The core objective of the work was the conception and practical realization of a functioning, flexible, and cost-effective Smart Home system. The focus was on open-source components and manufacturer-independent solutions. Suitable communication protocols, hardware selection (especially Raspberry Pi as the central unit and the CC2531 USB stick as a ZigBee coordinator), as well as the evaluation and implementation of the software platforms Domoticz and Home Assistant were investigated. The thesis thus demonstrates a comprehensive example of a self-built, IoT-based Smart Home.
+            The core objective of the work was the conception and practical realization of a functioning, flexible, and cost-effective Smart Home system. The focus was on open-source components and manufacturer-independent solutions. Suitable communication protocols, hardware selection (especially Raspberry Pi as the central unit and the CC2531 USB stick as a ZigBee coordinator), as well as the evaluation and implementation of the software platforms Domoticz and Home Assistant were investigated. The thesis thus demonstrates a comprehensive example of a self-built, IoT-based Smart Home.
           </p>
         </div>
       </motion.section>
@@ -105,7 +109,49 @@ const AboutProjectPage = () => {
           </motion.p>
         </div>
       </motion.section>
+      {/* AI Chat Link Card */}
+      <motion.section
+        variants={sectionVariants}
+        custom={0.9}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        className="bg-secondary/10 p-6 md:p-8 rounded-xl shadow-lg mt-12"
+      >
+        <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-primary-dark text-center">
+          AI Chat References
+        </h2>
+        <p className="text-muted-foreground text-center mb-6 text-sm md:text-base">
+          Browse the original AI-assisted conversations that helped shape this project:
+        </p>
+        <div className="flex justify-center space-x-6">
+          {/* ChatGPT Link */}
+          <a
+            href="https://chatgpt.com/share/68567976-a9b0-800c-8c99-f063ca0df13e"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View shared ChatGPT conversation"
+            className="text-primary hover:text-cta transition-colors"
+          >
+            <Bot size={36} />
+          </a>
+
+          {/* Gemini Link */}
+          <a
+            href="https://aistudio.google.com/app/prompts?state=%7B%22ids%22:%5B%221a4CtIdQNeQmFm8EL2R7hJxUVquVfGQ3o%22%5D,%22action%22:%22open%22,%22userId%22:%22100853443085577157326%22,%22resourceKeys%22:%7B%7D%7D&usp=sharing "
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View shared Gemini conversation"
+            className="text-primary hover:text-cta transition-colors"
+          >
+            <Sparkles size={36} />
+          </a>
+        </div>
+      </motion.section>
+
     </motion.div>
+
+    
   );
 };
 
