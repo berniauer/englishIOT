@@ -80,7 +80,7 @@ const DiscussionResultsPage = () => {
           The following chart provides a summarized, side-by-side comparison of key platform attributes based on the Likert-scale evaluation from the thesis.
         </p>
         <img
-          src="/assets/img/domoticz-vs-home-assistant.svg"
+          src={`${import.meta.env.BASE_URL}assets/img/domoticz-vs-home-assistant.svg`}
           alt="Comparison chart of Domoticz and Home Assistant smart home platforms"
           className="w-full max-w-5xl mx-auto rounded-md border border-muted"
         />
