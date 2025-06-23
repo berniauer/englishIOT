@@ -172,6 +172,66 @@ const HomePage = () => {
           </Button> */}
         </div>
       </motion.section>
+
+      <motion.section
+        className="py-10 md:py-12 bg-secondary/10 rounded-xl shadow-sm"
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        custom={0.2}
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12 text-primary">Podcast Integration</h2>
+        <div className="max-w-3xl mx-auto bg-card p-8 rounded-lg shadow-lg">
+          <p className="text-muted-foreground text-left md:text-lg leading-relaxed mb-6">
+            Explore our podcast series where we discuss the latest trends in Smart Home technology, IoT innovations, and practical tips for DIY enthusiasts. Join us as we interview experts and share insights that can help you on your Smart Home journey.
+          </p>
+          {/* Podcast Audio Player */}
+          <audio controls className="w-full mb-6">
+            <source src="https://assets.monica.im/podcast/audio/2025-06-23/monica_podcast_merge_audio/en_US/19aec1a9-9d6f-4e12-8130-ffdbd516f0a4.mp3" type="audio/mp3" />
+            Your browser does not support the audio element.
+          </audio>
+          <Button asChild variant="link" className="text-cta hover:text-cta/80">
+            <a href="https://assets.monica.im/podcast/audio/2025-06-23/monica_podcast_merge_audio/en_US/19aec1a9-9d6f-4e12-8130-ffdbd516f0a4.mp3" target="_blank" rel="noopener noreferrer">
+              Listen to the Podcast
+            </a>
+          </Button>
+        </div>
+      </motion.section>
+
+       {/* Fake Tweet Section */}
+      <motion.section
+        className="py-8 md:py-10 flex justify-center"
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        custom={0.3}
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <div className="max-w-xl w-full bg-card border border-blue-200 rounded-2xl shadow-md p-6 flex flex-col gap-3">
+          <div className="flex items-center gap-3 mb-2">
+            <span className="inline-block w-10 h-10 rounded-full bg-blue-200 flex items-center justify-center text-xl font-bold text-blue-700">🐦</span>
+            <div>
+              <span className="font-semibold text-blue-700">SmartHomeBot</span>
+              <span className="ml-2 text-muted-foreground text-sm">@smarthome_news · now</span>
+            </div>
+          </div>
+          <div className="text-lg leading-relaxed text-foreground whitespace-pre-line">
+            🚀 Building a DIY Smart Home with ZigBee, Raspberry Pi, and open-source power 💡
+            <br />
+            Domoticz vs. Home Assistant?
+            <br />
+            Zigbee2MQTT makes it all work.
+            <br />
+            Open. Secure. Scalable.
+            <br />
+            🔗 Stay tuned for the full story!
+          </div>
+          <div className="mt-2 text-blue-600 text-base font-medium">
+            #SmartHome #IoT #RaspberryPi #ZigBee #HomeAssistant #Domoticz #OpenSource #Automation
+          </div>
+        </div>
+      </motion.section>
     </motion.div>
   );
 };
